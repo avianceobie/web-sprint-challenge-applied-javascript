@@ -41,7 +41,9 @@ const Card = (article) => {
   authorPhoto.src = article.authorPhoto;
   authorName.textContent = article.authorName;
 
-  card.addEventListener('click', console.log(headline));
+  card.addEventListener('click', () => {
+    console.log(headline)
+  });
 
   return card
 }
