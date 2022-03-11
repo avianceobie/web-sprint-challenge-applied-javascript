@@ -14,17 +14,17 @@ const Tabs = (data) => {
   //   <div class="tab">technology</div>
   // </div>
   //
-  const topicsCard = document.createElement('div');
+  const topicsTab = document.createElement('div');
   const topic = document.createElement('div');
 
-  topicsCard.appendChild(topic);
+  topicsTab.appendChild(topic);
 
-  topicsCard.classList.add('topics');
+  topicsTab.classList.add('topics');
   topic.classList.add('tab');
 
   topic.textContent = data;
 
-  return topicsCard
+  return topicsTab
 }
 
 const tabsAppender = (selector) => {
