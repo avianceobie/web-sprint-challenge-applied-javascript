@@ -32,7 +32,7 @@ const Card = (article) => {
   imgContainer.appendChild(authorPhoto);
   author.appendChild(authorName);
 
-  card.classList.add('class');
+  card.classList.add('card');
   headline.classList.add('headline');
   author.classList.add('author');
   imgContainer.classList.add('img-container');
