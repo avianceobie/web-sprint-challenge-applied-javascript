@@ -60,7 +60,7 @@ In meeting the minimum viable product (MVP) specifications listed below, your pr
 Demonstrate your understanding of this week's concepts by answering the following questions:
 
 1. What is the DOM?
-    The Document Object Model is the  representation of the objects that make up the content of a document on the web.
+    The Document Object Model is the representation of the objects that make up the content of a document on the web.
 2. What is an event?
     An event is a user's interaction with a site.
 3. What is an event listener?

@@ -14,18 +14,19 @@ const Tabs = (data) => {
   //   <div class="tab">technology</div>
   // </div>
   //
-  const topicsTab = document.createElement('div');
-  const topic = document.createElement('div');
+  const topicsCard = document.createElement('div');
+  topicsCard.classList.add('topics');
 
-  topicsTab.appendChild(topic);
+  data.forEach(element => {
+    const topic = document.createElement('div');
+    topic.classList.add('tab');
 
-  topicsTab.classList.add('topics');
-  topic.classList.add('tab');
-
-  topic.textContent = data;
-
-  return topicsTab
+    topic.textContent = element
+    topicsCard.appendChild(topic);
+});
+  return topicsCard
 }
+
 
 const tabsAppender = (selector) => {
   // TASK 4
@@ -39,10 +40,8 @@ const tabsAppender = (selector) => {
   const entryPoint = document.querySelector(selector)
   axios.get('http://localhost:5000/api/topics')
     .then(response => {
-      console.log(response)
-      response.data.topics.forEach(element => {
-        entryPoint.appendChild(Tabs(element))
-    });
+      console.log(response.data.topics)
+        entryPoint.appendChild(Tabs(response.data.topics))
     })
     .catch(error => {
       console.error(error)
